@@ -57,7 +57,7 @@ def register():
 @app.route('/api/login', methods=['POST'])
 def login():
 
-    #Inicia sesión
+    #Inicia sesió
   
     data = request.get_json()
 
