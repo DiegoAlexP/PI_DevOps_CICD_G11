@@ -5,7 +5,7 @@ from models import User
 
 
 class TestAuthBackend(unittest.TestCase):
-    #Pruebas unitarias para el backend de autenticación
+    #Pruebas unitarias para el backend de autenti
 
     def setUp(self):
         app.config['TESTING'] = True
