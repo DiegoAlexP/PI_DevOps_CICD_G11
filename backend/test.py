@@ -20,12 +20,11 @@ class TestAuthBackend(unittest.TestCase):
             db.drop_all()
 
     def test_register_success(self):
-        #Test: Registro exitoso
         payload = {'username': 'diego', 'email': 'diego@mail.com', 'password': 'pass123'}
         response = self.client.post('/api/register', data=json.dumps(payload), content_type='application/json')
         self.assertEqual(response.status_code, 201)
         data = json.loads(response.data)
-        self.assertEqual(data['user']['username'], 'carlos')
+        self.assertEqual(data['user']['username'], 'diego')
 
     def test_login_success(self):
         #Test: Login exitoso
